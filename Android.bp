@@ -1,0 +1,10 @@
+// Namespace shim re-enabling the CAF MSM8996 media (VIDC OMX / Venus V4L2)
+// HAL that the lineage-23.2 manifest dropped.  Fujisan keeps its display
+// headers in the device tree and its qdMetaData ABI in the vendor tree, so
+// this namespace imports both so the source-built OMX modules can link them.
+soong_namespace {
+    imports: [
+        "device/zte/fujisan",
+        "vendor/zte/fujisan",
+    ],
+}
